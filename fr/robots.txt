@@ -1,1 +1,1 @@
-Sitemap: https://thomasfaria.github.io/retex-innovation-insee/sitemap.xml
+Sitemap: https://inseefrlab.github.io/DT-cloud-prod-stat/fr/sitemap.xml
