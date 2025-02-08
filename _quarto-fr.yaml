@@ -5,7 +5,7 @@ project:
     - "src/pdf-fr/index.qmd"
 
 website: 
-  title: SSP Cloud Datalab
+  title: DT Cloud & Production Statistique
   
   sidebar:
     contents:

@@ -5,7 +5,7 @@ project:
     - "src/pdf-en/index.qmd"
 
 website: 
-  title: SSP Cloud Datalab
+  title: WP Cloud & Statistical Production
   
   sidebar:
     contents:
@@ -13,7 +13,7 @@ website:
         href: src/introduction/index.qmd
       - text: "2 - Principles"
         href: src/principles/index.qmd
-      - text: "3 - Implementations"
+      - text: "3 - Implementation"
         href: src/implementation/index.qmd
       - text: "4 - MLOps"
         href: src/mlops/index.qmd

@@ -10,10 +10,9 @@ project:
     - "src/discussion/index.qmd"
 
 website: 
-  title: SSP Cloud Datalab
   page-navigation: true
-  site-url: "https://thomasfaria.github.io/retex-innovation-insee" 
-  repo-url: "https://github.com/ThomasFaria/retex-innovation-insee"
+  site-url: "https://inseefrlab.github.io/DT-cloud-prod-stat/fr/" 
+  repo-url: "https://github.com/InseeFrLab/DT-cloud-prod-stat"
   # repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
 
