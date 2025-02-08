@@ -1,0 +1,60 @@
+---
+title: "A cloud-native data science platform to build production-grade machine learning systems"
+
+# format:
+#   ctk-article-typst:
+#     include-in-header: ../customisation_template.typ
+#     keep-typ: true
+
+format:
+  typst:
+    keep-typ: true
+    section-numbering: 1.1.1
+
+author:
+  - name: Romain Avouac
+    affiliations:
+      - name: Insee
+        department: Diit
+    email: romain.avouac@insee.fr
+  - name: Thomas Faria
+    affiliations:
+      - name: Insee
+        department: SSP-Lab
+    email: thomas.faria@insee.fr
+  - name: Frédéric Comte
+    affiliations:
+      - name: Insee
+        department: Diit
+    email: frederic.comte@insee.fr
+fig-cap-location: top
+date: today
+abstract: |
+  In recent years, statisticians trained in data science methods have been joining National Statistical Offices (NSOs), aiming to harness non-traditional data sources and machine learning methods to enhance the production of official statistics. Despite their expertise, these professionals encounter significant barriers, including limited computational resources, inflexible development environments that do not foster collaborative work, and limited tools to transition from innovative experiments to production-grade solutions. This paper presents Onyxia, an open-source project developed to address these challenges by enabling organizations to build modern and flexible data science environments that enhance the autonomy of statisticians. With Onyxia and its showcase instance, the SSP Cloud, we demonstrate how cloud technologies can be made readily accessible, fostering innovation, collaboration and reproducibility in the field of official statistics. Through a case study of the classification of the activity domain (NACE) of French companies, we illustrate how these tools have been instrumental in operationalizing machine learning models in accordance with MLOps principles, marking a significant step forward in the valorisation of data science projects at Insee.
+keywords:
+  - blabla
+# thanks: "Nous remercions Daffy Duck et Mickey Mouse pour leur contribution."
+# papersize: a4
+# margins: 1.25in
+# mainfont: New Computer Modern
+# codefont: New Computer Modern Math
+title-page: true
+toc: false
+linkcolor: "#000000"
+bibliography: ../references.bib
+
+# output-file: "output.pdf"
+# functions:
+#   - "titled-raw-block"
+#   - "text"
+---
+
+{{< include ../introduction/index.qmd >}}
+
+{{< include ../principles/index.qmd >}}
+
+{{< include ../implementation/index.qmd >}}
+
+{{< include ../mlops/index.qmd >}}
+
+{{< include ../discussion/index.qmd >}}

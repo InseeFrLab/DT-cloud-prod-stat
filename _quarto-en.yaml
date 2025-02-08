@@ -1,0 +1,26 @@
+project:
+  output-dir: _site/en
+
+  render:
+    - "src/pdf-en/index.qmd"
+
+website: 
+  title: SSP Cloud Datalab
+  
+  sidebar:
+    contents:
+      - text: "1 - Introduction"
+        href: src/introduction/index.qmd
+      - text: "2 - Principles"
+        href: src/principles/index.qmd
+      - text: "3 - Implementations"
+        href: src/implementation/index.qmd
+      - text: "4 - MLOps"
+        href: src/mlops/index.qmd
+      - text: "5 - Discussion"
+        href: src/discussion/index.qmd
+
+    tools: 
+      - icon: file-pdf-fill
+        href: src/pdf-en/index.pdf
+        text: "PDF"

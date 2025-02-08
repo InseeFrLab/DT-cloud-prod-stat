@@ -1,0 +1,14 @@
+*.aux
+*.idx
+*.log
+*.pdf
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.out
+
+/.quarto/
+/_site/
+/site_libs/
+*.typ

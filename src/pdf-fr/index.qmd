@@ -1,0 +1,61 @@
+---
+title: "Mettre les technologies cloud au service de la production statistique"
+
+# format:
+#   ctk-article-typst:
+#     include-in-header: ../customisation_template.typ
+#     keep-typ: true
+
+format:
+  typst:
+    keep-typ: true
+    section-numbering: 1.1.1
+
+author:
+  - name: Romain Avouac
+    affiliations:
+      - name: Insee
+        department: DMTR
+    email: romain.avouac@insee.fr
+  - name: Thomas Faria
+    affiliations:
+      - name: Insee
+        department: SSP-Lab
+    email: thomas.faria@insee.fr
+  - name: Frédéric Comte
+    affiliations:
+      - name: Insee
+        department: DIIT
+    email: frederic.comte@insee.fr
+fig-cap-location: top
+date: today
+abstract: |
+  French
+keywords:
+  - blabla
+# thanks: "Nous remercions Daffy Duck et Mickey Mouse pour leur contribution."
+# papersize: a4
+# margins: 1.25in
+# mainfont: New Computer Modern
+# codefont: New Computer Modern Math
+title-page: true
+toc: false
+linkcolor: "#000000"
+bibliography: ../references.bib
+lang: "fr-FR"
+
+# output-file: "output.pdf"
+# functions:
+#   - "titled-raw-block"
+#   - "text"
+---
+
+{{< include ../introduction/index.qmd >}}
+
+{{< include ../principles/index.qmd >}}
+
+{{< include ../implementation/index.qmd >}}
+
+{{< include ../mlops/index.qmd >}}
+
+{{< include ../discussion/index.qmd >}}

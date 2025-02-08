@@ -1,0 +1,45 @@
+project:
+  type: website
+
+  render:
+    - "index.qmd"
+    - "src/introduction/index.qmd"
+    - "src/principles/index.qmd"
+    - "src/implementation/index.qmd"
+    - "src/mlops/index.qmd"
+    - "src/discussion/index.qmd"
+
+website: 
+  title: SSP Cloud Datalab
+  page-navigation: true
+  site-url: "https://thomasfaria.github.io/retex-innovation-insee" 
+  repo-url: "https://github.com/ThomasFaria/retex-innovation-insee"
+  # repo-actions: [edit, source, issue]
+  favicon: images/favicon.ico
+
+  sidebar:
+    style: "docked"
+    background: "light"
+    
+    favicon: images/favicon.ico
+    pinned: true
+    align: center
+    tools: 
+      - icon: translate
+        menu: 
+          - href: ../fr/
+            text: "Français"
+          - href: ../en/
+            text: "English"
+
+format:
+  html:
+    theme: cosmo
+    css: styles/styles.css
+    toc: true
+    code-annotations: hover
+    code-link: true
+    reference-location: margin
+    number-sections: true
+
+bibliography: src/references.bib 

@@ -1,0 +1,27 @@
+
+.no-anchor.card-title.listing-title {
+    font-weight: bolder !important;
+    color: #802a03 !important;
+    }
+
+.navbar-title code {
+    color: #ff562c;
+    background-color: inherit;
+  }
+
+.badge{
+  text-justify: center;
+}
+
+.highlight-line{
+  color: "yellow";
+}
+
+.green2, .green2 code, .green2 a { color: #008A25!important; }
+.red2, .red2 code, .red2 a { color: #EE0220!important; }
+.blue2, .blue2 code, .blue2 a { color: #4758AB!important; }
+.yellow2, .yellow2 code, .yellow2 a { color: #ddcb28!important; }
+
+.orange {
+  color: rgb(255, 86, 44);
+}
