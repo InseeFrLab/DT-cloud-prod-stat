@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/mlops/index.html</loc>
-    <lastmod>2025-02-09T09:30:48.073Z</lastmod>
-  </url>
-  <url>
-    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/principles/index.html</loc>
-    <lastmod>2025-02-09T09:30:48.074Z</lastmod>
-  </url>
-  <url>
-    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/index.html</loc>
-    <lastmod>2025-02-09T09:30:48.072Z</lastmod>
-  </url>
-  <url>
-    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/introduction/index.html</loc>
-    <lastmod>2025-02-09T09:30:48.073Z</lastmod>
+    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/discussion/index.html</loc>
+    <lastmod>2025-02-09T10:03:39.684Z</lastmod>
   </url>
   <url>
     <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/implementation/index.html</loc>
-    <lastmod>2025-02-09T09:30:48.073Z</lastmod>
+    <lastmod>2025-02-09T10:03:39.685Z</lastmod>
   </url>
   <url>
-    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/discussion/index.html</loc>
-    <lastmod>2025-02-09T09:30:48.072Z</lastmod>
+    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/introduction/index.html</loc>
+    <lastmod>2025-02-09T10:03:39.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/index.html</loc>
+    <lastmod>2025-02-09T10:03:39.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/principles/index.html</loc>
+    <lastmod>2025-02-09T10:03:39.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://inseefrlab.github.io/DT-cloud-prod-stat/fr/src/mlops/index.html</loc>
+    <lastmod>2025-02-09T10:03:39.685Z</lastmod>
   </url>
 </urlset>
