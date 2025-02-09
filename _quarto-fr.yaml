@@ -1,8 +1,8 @@
 project:
   output-dir: _site/fr
   
-  render:
-    - "src/pdf-fr/index.qmd"
+  # render:
+  #   - "src/pdf-fr/index.qmd"
 
 website: 
   title: DT Cloud & Production Statistique
