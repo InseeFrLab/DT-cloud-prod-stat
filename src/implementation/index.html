@@ -119,21 +119,6 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">DT Cloud &amp; Production Statistique</a> 
         <div class="sidebar-tools-main">
-    <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-translate"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../fr/">
-            Français
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../en/">
-            English
-            </a>
-          </li>
-      </ul>
-    </div>
     <a href="../../src/pdf-fr/index.pdf" title="PDF" class="quarto-navigation-tool px-1" aria-label="PDF"><i class="bi bi-file-pdf-fill"></i></a>
 </div>
     </div>
@@ -201,9 +186,6 @@ div.csl-indent {
 
 
 
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
 <section id="sec-implementation-fr" class="level1 page-columns page-full" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Un projet <em>open source</em> pour faciliter l’adoption des technologies <em>cloud</em></h1>
 <p>Notre revue de la littérature et de l’évolution de l’éco-système de la donnée mettent en évidence les technologies <em>cloud</em>, en particulier la conteneurisation et le stockage objet, comme des éléments clés pour construire une plateforme de <em>data science</em> à la fois scalable et flexible. Néanmoins, les arguments qui justifient d’investir dans ce type d’infrastructure en tant qu’organisation ne suffisent pas à eux seuls à garantir leur adoption dans les pratiques. Cette section revient sur la genèse et le développement d’Onyxia, un projet développé à l’Insee qui vise à démocratiser l’accès aux technologies <em>cloud</em> en fournissant aux statisticiens des environnements de <em>data science</em> prêts à l’emploi qui favorisent l’expérimentation. Enfin, nous montrons comment les principes fondamentaux qui sous-tendent le projet Onyxia — innovation ouverte, licence <em>open-source</em> absence d’enfermement propriétaire — s’inscrit dans une volonté de construire des communs numériques (“<em>commons</em>”) facilement réutilisables par les organisations. Ces principes ont permis le développement du projet à la fois à l’Insee et en dehors de l’Insee avec plusieurs instances en production et de nombreuses autres à l’essai.</p>
@@ -395,7 +377,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/inseefrlab\.github\.io\/DT-cloud-prod-stat\/fr\/");
+      var filterRegex = new RegExp("https:\/\/inseefrlab\.github\.io\/DT-cloud-prod-stat\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

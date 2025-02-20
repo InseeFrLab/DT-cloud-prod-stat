@@ -127,21 +127,6 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">DT Cloud &amp; Production Statistique</a> 
         <div class="sidebar-tools-main">
-    <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-translate"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../fr/">
-            Français
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../en/">
-            English
-            </a>
-          </li>
-      </ul>
-    </div>
     <a href="../../src/pdf-fr/index.pdf" title="PDF" class="quarto-navigation-tool px-1" aria-label="PDF"><i class="bi bi-file-pdf-fill"></i></a>
 </div>
     </div>
@@ -193,7 +178,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#discussion-1" id="toc-discussion-1" class="nav-link active" data-scroll-target="#discussion-1"><span class="header-section-number">5</span> Discussion</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link active" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a></li>
   </ul>
 </nav>
     </div>
@@ -203,10 +188,7 @@ window.Quarto = {
 
 
 
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
-<section id="discussion-1" class="level1 page-columns page-full" data-number="5">
+<section id="discussion" class="level1 page-columns page-full" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Discussion</h1>
 <p>Le développement des méthodes de <em>data science</em> offre un potentiel considérable pour la statistique publique. Cependant, notre capacité à tirer profit de ces nouvelles méthodes dépend essentiellement de notre aptitude à produire des chaînes de production de qualité, robustes et adaptés à leurs objectifs. Cette évolution nécessite une réflexion approfondie sur ce qui constitue une infrastructure moderne et évolutive pour la <em>data science</em> dans le domaine des statistiques publiques. Cet article présente le projet Onyxia, une proposition pour une telle plateforme développée à l’Insee. En exploitant des technologies <em>cloud</em> devenues des standards dans l’écosystème de la donnée, le projet vise à accroître l’autonomie des statisticiens dans l’orchestration de leurs traitements statistiques, tout en favorisant la reproductibilité des statistiques produites. Les technologies <em>cloud</em> étant notoirement difficiles à configurer, la valeur principale d’Onyxia réside dans leur accessibilité pour les statisticiens grâce à une interface ergonomique, simple d’utilisation, et un catalogue de services préconfigurés couvrant les usages les plus courants d’un statisticien public. À travers un projet interne visant à refondre le processus de codification de l’Activité Principale de l’Entreprise (APE) en utilisant des méthodes d’apprentissage automatique, nous illustrons comment Onyxia permet de construire de manière itérative des projets de <em>machine learning</em> prêts à passer en production, favorisant l’amélioration continue, un principe fondamental de l’approche MLOps.</p>
 <p>Initialement développé comme un projet interne, Onyxia a acquis une reconnaissance dépassant le cadre de l’Insee ou de l’administration française. Convaincues du potentiel des technologies <em>cloud</em> pour renforcer l’autonomie et exploiter pleinement le potentiel de la <em>data science</em>, plusieurs organisations disposent désormais d’une instance de production d’Onyxia (comme c’est le cas à l’Insee avec le déploiement récent de <span class="math inline">\(LS^3\)</span>), et de nombreuses autres sont en phase de test ou d’implémentation. Par ailleurs, le choix d’Onyxia comme plateforme de <em>data science</em> de référence dans le cadre du projet AIML4OS devrait encore accroître son adoption au sein du SSE. Cette tendance est naturellement très bénéfique pour le projet Onyxia, qui passe d’un projet développé en <em>open source</em> — mais principalement à l’Insee — à un véritable projet <em>open source</em> avec une base croissante de contributeurs. Cela, en retour, facilite son adoption par d’autres organisations, en offrant davantage de garanties sur sa pérennité indépendamment de la stratégie de l’Insee. La gouvernance du projet évolue actuellement pour refléter cette tendance, notamment avec l’organisation de réunions communautaires mensuelles et la création d’un canal public et d’une feuille de route pour le projet<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
@@ -309,7 +291,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/inseefrlab\.github\.io\/DT-cloud-prod-stat\/fr\/");
+      var filterRegex = new RegExp("https:\/\/inseefrlab\.github\.io\/DT-cloud-prod-stat\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

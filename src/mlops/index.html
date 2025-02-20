@@ -148,21 +148,6 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">DT Cloud &amp; Production Statistique</a> 
         <div class="sidebar-tools-main">
-    <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-translate"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../fr/">
-            Français
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../../../en/">
-            English
-            </a>
-          </li>
-      </ul>
-    </div>
     <a href="../../src/pdf-fr/index.pdf" title="PDF" class="quarto-navigation-tool px-1" aria-label="PDF"><i class="bi bi-file-pdf-fill"></i></a>
 </div>
     </div>
@@ -218,7 +203,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#améliorer-la-codification-de-lape-à-laide-de-méthodes-dapprentissage-automatique" id="toc-améliorer-la-codification-de-lape-à-laide-de-méthodes-dapprentissage-automatique" class="nav-link" data-scroll-target="#améliorer-la-codification-de-lape-à-laide-de-méthodes-dapprentissage-automatique"><span class="header-section-number">4.1</span> Améliorer la codification de l’APE à l’aide de méthodes d’apprentissage automatique</a>
   <ul class="collapse">
-  <li><a href="#motivation-1" id="toc-motivation-1" class="nav-link" data-scroll-target="#motivation-1"><span class="header-section-number">4.1.1</span> Motivation</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><span class="header-section-number">4.1.1</span> Motivation</a></li>
   <li><a href="#la-tâche-de-codification" id="toc-la-tâche-de-codification" class="nav-link" data-scroll-target="#la-tâche-de-codification"><span class="header-section-number">4.1.2</span> La tâche de codification</a></li>
   <li><a href="#méthodologie" id="toc-méthodologie" class="nav-link" data-scroll-target="#méthodologie"><span class="header-section-number">4.1.3</span> Méthodologie</a></li>
   </ul></li>
@@ -247,16 +232,13 @@ window.Quarto = {
 
 
 
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
 <section id="sec-mlops-fr" class="level1 page-columns page-full" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Faire du <em>machine learning</em> en production : l’exemple de la codification de l’APE</h1>
 <p>Ce chapitre vise à illustrer comment l’Insee a réussi à déployer son premier modèle de machine learning (ML) en production. Il propose une description détaillée de l’approche MLOps à laquelle ce projet s’est efforcé d’adhérer, en mettant l’accent sur les différentes technologies employées. En particulier, nous soulignons le rôle crucial des technologies <em>cloud</em> qui ont permis la construction du projet de manière itérative, ainsi que la manière dont Onyxia a grandement facilité cette construction en fournissant des environnements de développement flexibles et des outils pour entraîner, déployer et surveiller les modèles des modèles d’apprentissage automatique. De plus, la convergence entamée des environnement de <em>self</em> (<span class="math inline">\(LS^3\)</span>), de développement (KubeDev) et de production (KubeProd) constitue une réelle avancée pour faciliter la mise en production d’autres modèles d’apprentissage automatique<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Le projet présenté est disponible en open source<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> et reste en cours de développement actif.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Un modèle similaire pour améliorer la codification de la PCS dans la nomenclature PCS2020 a ainsi également été déployé en production récemment.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;<a href="">https://github.com/orgs/InseeFrLab/teams/codification-ape/repositories</a></p></div></div><section id="améliorer-la-codification-de-lape-à-laide-de-méthodes-dapprentissage-automatique" class="level2 page-columns page-full" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="améliorer-la-codification-de-lape-à-laide-de-méthodes-dapprentissage-automatique"><span class="header-section-number">4.1</span> Améliorer la codification de l’APE à l’aide de méthodes d’apprentissage automatique</h2>
-<section id="motivation-1" class="level3 page-columns page-full" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="motivation-1"><span class="header-section-number">4.1.1</span> Motivation</h3>
+<section id="motivation" class="level3 page-columns page-full" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">4.1.1</span> Motivation</h3>
 <p>Les tâches de codification sont des opérations bien connues des instituts statistiques, et peuvent parfois être complexes en raison de la taille des nomenclatures. À l’Insee, un outil sophistiqué appelé Sicore a été développé dans les années 1990 pour effectuer diverses tâches de classification <span class="citation" data-cites="meyer_sicore_1997">(<a href="#ref-meyer_sicore_1997" role="doc-biblioref">Meyer and Rivière 1997</a>)</span>. Cet outil repose sur un ensemble de règles déterministes permettant d’identifier les codes corrects à partir d’un libellé textuel en se basant sur un fichier de référence comprenant un certain nombre d’exemples. Chaque libellé d’entrée est soumis à ces règles et, lorsqu’un code correct est reconnu, il est attribué au libellé. En revanche, si le libellé n’est pas reconnu, il est soumis à une procédure de reprise manuelle par des gestionnaires de l’Insee.</p>
 <p>Deux raisons principales ont motivé l’expérimentation de nouvelles méthodes de codification. Premièrement, un changement interne est survenu avec la refonte du répertoire statistique des entreprises en France (Sirene), qui liste toutes les entreprises et leur attribue un identifiant unique utilisé par les administrations publiques, le numéro Siren. Les principaux objectifs de cette refonte étaient d’améliorer la gestion quotidienne du répertoire pour les agents de l’Insee et de réduire les délais d’attente pour les entreprises. Par ailleurs, au niveau national, le gouvernement a lancé dans le cadre de la loi PACTE (n° 2019-486 du 22 mai 2019) un guichet unique pour les formalités des entreprises, offrant aux chefs d’entreprises plus de flexibilité dans la description de leurs activités principales mais les rendant ainsi mécaniquement plus verbeux que précédemment. Les tests initiaux ont révélé que Sicore n’était plus adapté pour effectuer la codification APE, puisque seulement <span class="math inline">\(30\%\)</span> des liasses d’entreprises étaient automatiquement codées, et donc <span class="math inline">\(70\%\)</span> partaient en reprise manuelle. Les équipes en charge du répertoire Sirene, déjà confrontées à des charges de travail importantes et à de fortes contraintes opérationnelles, ne pouvaient pas voir leur charge augmentée par une re-codification manuelle du fait du caractère très chronophage de la tâche. Ainsi, en mai 2022, la décision a été prise d’expérimenter de nouvelles méthodes pour effectuer cette tâche de codification, avec pour objectif de les utiliser en production dès le 1er janvier 2023, date de lancement du nouveau répertoire Sirene.</p>
 <p>Trois parties prenantes étaient donc impliquées dans ce projet : l’équipe métier (division RIAS<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>), responsable de la gestion du répertoire statistique des entreprises ; l’équipe informatique, en charge du développement des applications liés au fonctionnement du répertoire ; et l’équipe d’innovation (l’unité SSP Lab), responsable de la mise en œuvre du nouvel outil de codification.</p>
@@ -560,7 +542,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/inseefrlab\.github\.io\/DT-cloud-prod-stat\/fr\/");
+      var filterRegex = new RegExp("https:\/\/inseefrlab\.github\.io\/DT-cloud-prod-stat\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
