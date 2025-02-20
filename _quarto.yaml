@@ -2,34 +2,36 @@ project:
   type: website
 
   render:
-    - "index.qmd"
-    - "src/introduction/index.qmd"
-    - "src/principles/index.qmd"
-    - "src/implementation/index.qmd"
-    - "src/mlops/index.qmd"
-    - "src/discussion/index.qmd"
+    - "*.qmd"
 
 website: 
+  title: DT Cloud & Production Statistique
   page-navigation: true
-  site-url: "https://inseefrlab.github.io/DT-cloud-prod-stat/fr/" 
+  site-url: "https://inseefrlab.github.io/DT-cloud-prod-stat/" 
   repo-url: "https://github.com/InseeFrLab/DT-cloud-prod-stat"
-  # repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
 
   sidebar:
     style: "docked"
     background: "light"
-    
     favicon: images/favicon.ico
     pinned: true
     align: center
+    contents:
+      - text: "1 - Introduction"
+        href: src/introduction/index.qmd
+      - text: "2 - Principes"
+        href: src/principles/index.qmd
+      - text: "3 - Implémentation"
+        href: src/implementation/index.qmd
+      - text: "4 - MLOps"
+        href: src/mlops/index.qmd
+      - text: "5 - Discussion"
+        href: src/discussion/index.qmd
     tools: 
-      - icon: translate
-        menu: 
-          - href: ../fr/
-            text: "Français"
-          - href: ../en/
-            text: "English"
+      - icon: file-pdf-fill
+        href: src/pdf-fr/index.pdf
+        text: "PDF"
 
 format:
   html:

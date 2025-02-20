@@ -5,29 +5,6 @@ author:
     - "Frédéric Comte"
 ---
 
-
-
-::: {.content-visible when-format="html"}
-
-
-:::: {.content-visible when-profile="en"}
-
-# A cloud-native data science platform to build production-grade machine learning systems {.unnumbered}
-
-#### Abstract {.unnumbered}
-
-In recent years, statisticians trained in data science methods have been joining National Statistical Offices (NSOs), aiming to harness non-traditional data sources and machine learning methods to enhance the production of official statistics. Despite their expertise, these professionals encounter significant barriers, including limited computational resources, inflexible development environments that do not foster collaborative work, and limited tools to transition from innovative experiments to production-grade solutions. This paper presents Onyxia, an open-source project developed to address these challenges by enabling organizations to build modern and flexible data science environments that enhance the autonomy of statisticians. With Onyxia and its showcase instance, the SSP Cloud, we demonstrate how cloud technologies can be made readily accessible, fostering innovation, collaboration and reproducibility in the field of official statistics. Through a case study of the classification of the activity domain (NACE) of French companies, we illustrate how these tools have been instrumental in operationalizing machine learning models in accordance with MLOps principles, marking a significant step forward in the valorisation of data science projects at Insee.
-
-::::
-
-
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
-<!-- ############################################################################################################## -->
-
-:::: {.content-visible when-profile="fr"}
-
-
 # Mettre les technologies cloud au service de la production statistique {.unnumbered}
 
 #### Résumé {.unnumbered}
@@ -35,8 +12,3 @@ In recent years, statisticians trained in data science methods have been joining
 Ces dernières années, des statisticiens formés aux méthodes de *data science* ont rejoint les instituts nationaux de statistique, avec l’objectif d’exploiter des sources de données non traditionnelles et des méthodes d’apprentissage automatique pour améliorer la production des statistiques publiques. Malgré leur expertise, ces professionnels rencontrent des obstacles majeurs, notamment l'accès à des ressources de calcul insuffisantes, des environnements de développement rigides ne favorisant pas le travail collaboratif, ainsi qu’un manque d’outils facilitant la transition des expérimentations innovantes vers des solutions prêtes pour la production. 
 
 Cet article présente Onyxia, un projet open-source développé pour répondre à ces défis en permettant aux organisations de construire des environnements modernes et flexibles de *data science*, renforçant ainsi l'autonomie des statisticiens. Avec Onyxia et son instance de démonstration, le SSP Cloud, nous montrons comment les technologies cloud peuvent être rendues facilement accessibles, favorisant l'innovation, la collaboration et la reproductibilité dans le domaine des statistiques publiques. À travers un exemple concret sur la codification des activités économiques des entreprises françaises (code APE), nous illustrons comment ces outils ont permis d’opérationnaliser des modèles de machine learning en accord avec les principes du MLOps, marquant ainsi une avancée significative dans la valorisation des projets de *data science* à l’Insee.
-
-::::
-
-:::
-

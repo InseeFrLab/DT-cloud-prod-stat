@@ -1,11 +1,6 @@
 ---
 title: "Mettre les technologies cloud au service de la production statistique"
 
-# format:
-#   ctk-article-typst:
-#     include-in-header: ../customisation_template.typ
-#     keep-typ: true
-
 format:
   typst:
     keep-typ: true
@@ -33,21 +28,11 @@ abstract: |
   French
 keywords:
   - blabla
-# thanks: "Nous remercions Daffy Duck et Mickey Mouse pour leur contribution."
-# papersize: a4
-# margins: 1.25in
-# mainfont: New Computer Modern
-# codefont: New Computer Modern Math
 title-page: true
 toc: false
 linkcolor: "#000000"
 bibliography: ../references.bib
 lang: "fr-FR"
-
-# output-file: "output.pdf"
-# functions:
-#   - "titled-raw-block"
-#   - "text"
 ---
 
 {{< include ../introduction/index.qmd >}}
