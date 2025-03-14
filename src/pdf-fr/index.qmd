@@ -24,8 +24,6 @@ author:
     email: frederic.comte@insee.fr
 fig-cap-location: top
 date: today
-abstract: |
-  French
 keywords:
   - blabla
 title-page: true
@@ -33,14 +31,35 @@ toc: false
 linkcolor: "#000000"
 bibliography: ../references.bib
 lang: "fr-FR"
+
+filters:
+  - abstract-section
 ---
+
+# Abstract
+
+{{< include /src/abstract/index.qmd >}}
+
+* * * *
+
+{{< pagebreak >}}
 
 {{< include ../introduction/index.qmd >}}
 
+{{< pagebreak >}}
+
 {{< include ../principles/index.qmd >}}
+
+{{< pagebreak >}}
 
 {{< include ../implementation/index.qmd >}}
 
+{{< pagebreak >}}
+
 {{< include ../mlops/index.qmd >}}
 
+{{< pagebreak >}}
+
 {{< include ../discussion/index.qmd >}}
+
+{{< pagebreak >}}
