@@ -7,8 +7,9 @@
 *.bbl
 *.blg
 *.out
+*.typ
+*.html
 
 /.quarto/
 /_site/
 /site_libs/
-*.typ

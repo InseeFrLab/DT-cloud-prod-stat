@@ -52,7 +52,7 @@ Le modèle fastText repose sur une approche de sac de mots (*bag-of-words*) pour
 
 [^embeddings]: Pour une introduction (en Anglais) à la fois visuelle et intuitive aux plongements lexicaux, voir : [https://jalammar.github.io/illustrated-word2vec/]()  
 
-![Aperçu simplifié du processus derrière la classification textuelle avec fastText](../../figures/fasttext.png){#fig-fasttext width="125%"}
+![Aperçu simplifié du processus derrière la classification textuelle avec fastText](/figures/fasttext.png){#fig-fasttext width="125%"}
 
 ## Une approche orientée production et MLOps
 
@@ -64,7 +64,7 @@ Le DevOps est un ensemble de pratiques conçu pour favoriser la collaboration en
 
 L’approche MLOps peut être vue comme une extension du DevOps, développée pour relever les défis spécifiques liés à la gestion du cycle de vie des modèles de ML. Fondamentalement, DevOps et MLOps partagent le même objectif : construire des logiciels de manière plus automatisée et robuste. La principale différence réside dans le fait qu'avec le MLOps, le logiciel inclut également une composante de *machine learning* (ML). Par conséquent, le cycle de vie du projet devient plus complexe. Le modèle de ML sous-jacent doit être réentraîné régulièrement afin d’éviter toute perte de performance au fil du temps. L’ingestion des données doit également être intégrée au processus, car de nouvelles données peuvent être utilisées pour améliorer les performances. La @fig-mlops-cycle présente les étapes d’un projet de ML en utilisant une représentation continue, comme cela se fait traditionnellement en DevOps. Cela illustre un principe fondamental du MLOps : la nécessité d’une amélioration continue, décrite plus en détail dans @sec-principles-mlops.
 
-![L'approche MLOps favorise une gestion plus continue du cycle de vie des projets de ML](../../figures/mlops-cycle.png){#fig-mlops-cycle}
+![L'approche MLOps favorise une gestion plus continue du cycle de vie des projets de ML](/figures/mlops-cycle.png){#fig-mlops-cycle}
 
 ### Principes du MLOps {#sec-principles-mlops}
 
@@ -85,7 +85,7 @@ De nombreux outils ont été développés pour mettre en œuvre l’approche MLO
 
 MLflow fournit un ensemble d'outils intégrés permettant d'implémenter les principes du MLOps efficacement au sein des projets de ML. Les *data scientists* peuvent encapsuler leur travail dans des objects *Projects* qui regroupent le code ML et ses dépendances, garantissant que chaque expérimentation soit reproductible et puisse être ré-exécutée de manière identique. Un projet s'appuie sur un objet *Model*, un format standardisé compatible avec la plupart des bibliothèques de ML et offrant une méthode normalisée pour déployer le modèle, par exemple via une API. Cette interopérabilité et cette standardisation sont essentielles pour soutenir l'amélioration continue du projet, puisque les modèles entraînés avec une multitude de packages peuvent être facilement comparés ou remplacés les uns par les autres sans casser le code existant. Le *Tracking Server* enregistre des informations détaillées sur chaque expérimentation — hyperparamètres, métriques, artefacts et données — ce qui favorise d'une part la reproductibilité et facilite la phase de sélection des modèles grâce à une interface utilisateur permettant de comparer simplement les performances. Une fois la phase d’expérimentation terminée, les modèles sélectionnés sont rajoutés dans le *Model Registry*, où ils sont versionnés et prêts pour le déploiement. Cet entrepôt sert de "magasin" centralisé pour les modèles, permettant aux différents membres ou équipes du projet de gérer collaborativement le cycle de vie du projet. La @fig-mlflow-components illustre les composants principaux de MLflow et la manière dont ils facilitent un flux de travail plus continu et collaboratif au sein d’un projet de ML.
 
-![Composants principaux de MLflow. Source : Databricks.](../../figures/mlflow-model-registry.png){#fig-mlflow-components}
+![Composants principaux de MLflow. Source : Databricks.](/figures/mlflow-model-registry.png){#fig-mlflow-components}
 
 ## Faciliter le développement itératif avec les technologies cloud
 
@@ -116,7 +116,7 @@ L’API servant le modèle a été déployée avec FastAPI[^fastapi], un framewo
 
 [^fastapi]: [https://fastapi.tiangolo.com]()
 
-![Une approche basé sur des technologies *cloud* pour servir un modèle de ML via une API REST](../../figures/api-datalab.png){#fig-api-datalab width="75%"}
+![Une approche basé sur des technologies *cloud* pour servir un modèle de ML via une API REST](/figures/api-datalab.png){#fig-api-datalab width="75%"}
 
 ### Construction d'un *pipeline* intégré
 
@@ -128,7 +128,7 @@ Afin d'automatiser ce processus, un *pipeline* CI/CD — un concept déjà prés
 
 Cependant, cette approche présente un inconvénient : elle limite la reproductibilité du déploiement, car chaque ressource est gérée indépendamment par l’orchestrateur, et le cycle de vie du déploiement de l’API dans son ensemble n’est pas contrôlé. Pour pallier cette lacune, la partie déploiement a été intégrée dans un *pipeline* CD basée sur l’approche GitOps : les manifestes des ressources de l’API sont également stockés dans un dépôt Git. L’état de ce dépôt "GitOps" est surveillé par un opérateur Kubernetes (ArgoCD), de sorte à ce que toute modification des manifestes de l’application soit directement propagée au déploiement sur le cluster. Dans ce nouveau *pipeline* intégré de bout en bout, la seule action nécessaire pour déclencher une mise à jour de l’API est de modifier le tag de l’image de l’API indiquant la version à déployer.
 
-![Le *pipeline* CI/CD implémenté dans le projet](../../figures/ci-cd.png){#fig-ci-cd}
+![Le *pipeline* CI/CD implémenté dans le projet](/figures/ci-cd.png){#fig-ci-cd}
 
 ### Supervision d’un modèle en production {#sec-monitoring}
 
@@ -150,7 +150,7 @@ La @fig-full-architecture détaille les composants ajoutés à l’architecture 
 
 [^quarto]: Successeur de R Markdown, Quarto est devenu un outil essentiel. Il unifie les fonctionnalités de plusieurs packages très utiles de l’écosystème R Markdown tout en offrant une prise en charge native de plusieurs langages de programmation, dont Python et Julia en plus de R. Il est de plus en plus utilisé à l’Insee pour produire des documents reproductibles et les exporter dans divers  (HTML, PDF, ODT, etc.).
 
-![Implémentation d’une architecture MLOps retenur pour le projet](../../figures/annotation-datalab.png){#fig-full-architecture}
+![Implémentation d’une architecture MLOps retenur pour le projet](/figures/annotation-datalab.png){#fig-full-architecture}
 
 ### Favoriser l'amélioration continue du modèle {#sec-annotation}
 
