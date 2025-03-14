@@ -6,7 +6,7 @@ number-offset: 3
 
 Ce chapitre vise à illustrer comment l’Insee a réussi à déployer son premier modèle de machine learning (ML) en production. Il propose une description détaillée de l’approche MLOps à laquelle ce projet s’est efforcé d’adhérer, en mettant l’accent sur les différentes technologies employées. En particulier, nous soulignons le rôle crucial des technologies *cloud* qui ont permis la construction du projet de manière itérative, ainsi que la manière dont Onyxia a grandement facilité cette construction en fournissant des environnements de développement flexibles et des outils pour entraîner, déployer et surveiller les modèles des modèles d'apprentissage automatique. De plus, la convergence entamée des environnement de *self* ($LS^3$), de développement (KubeDev) et de production (KubeProd) constitue une réelle avancée pour faciliter la mise en production d'autres modèles d'apprentissage automatique[^pcs2020]. Le projet présenté est disponible en open source[^codif-team] et reste en cours de développement actif.
 
-[^pcs2020]: Un modèle similaire pour améliorer la codification de la PCS dans la nomenclature PCS2020 a ainsi également été déployé en production récemment.
+[^pcs2020]: Un modèle similaire pour améliorer la codification de la PCS dans la nomenclature PCS2020 a également été déployé en production.
 [^codif-team]: [https://github.com/orgs/InseeFrLab/teams/codification-ape/repositories]()
 
 
