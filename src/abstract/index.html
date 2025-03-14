@@ -29,7 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/mlops/index.html" rel="prev">
 <link href="../../images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -72,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles/styles.css">
 </head>
 
-<body class="nav-sidebar docked slimcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -81,7 +80,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/discussion/index.html">5 - Discussion</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DT Cloud &amp; Production Statistique
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/discussion/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/discussion/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">5 - Discussion</span></a>
   </div>
 </li>
@@ -144,30 +145,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link active" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="discussion" class="level1 page-columns page-full" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Discussion</h1>
-<p>Le développement des méthodes de <em>data science</em> offre un potentiel considérable pour la statistique publique. Elles permettent de traiter des sources de données non-conventionnelles, que ce soit du fait de leur volumétrie ou de leur structure, et donc de produire de l’information statistique nouvelle et/ou à des résolutions spatiales et temporelles beaucoup plus fines. De même, les méthodes d’apprentissage statistique arrivent comme des outils supplémentaires dans la palette déjà large des statisticiens publics, et permettent à la fois d’explorer des domaines classiques de la statistique — comme l’imputation de données manquantes — de manière plus agnostique et de tirer parti de sources jusqu’ici peu exploitées — comme la détection du bâti à partir de données satellites grâce à des modèles d’apprentissage profond.</p>
-<p>Cependant, notre capacité à tirer profit de ces nouvelles méthodes dépend largement de notre aptitude à les intégrer dans des chaînes de production efficaces et robustes. Le cas d’usage présenté dans cet article — classifier les domaines d’activité des entreprises à l’aide de méthodes d’apprentissage automatique — illustre bien l’intrication des dimensions méthodologique et informatique dans le paradigme de la <em>data science</em>. Le passage rapide entre les phases d’expérimentation et de mise en production du projet a été largement favorisé par les possibilités de développement itératif et d’automatisation permis par les technologies <em>cloud</em>. Le projet s’est en effet construit par briques successives, d’une API minimale à un projet complet intégrant une couche de supervision permettant d’améliorer le modèle déployé au fil du temps. L’appropriation des technologies <em>cloud</em> par les membres des équipes impliquées a également été un facteur déterminant. Les environnements mis à disposition via le catalogue du SSP Cloud ont permis à la fois de développer rapidement des preuves de concept pour prouver l’intérêt de l’ajout de nouveaux composants et de favoriser la reproductibilité des expérimentations et leur passage en production en mettant en application les principes du MLOps.</p>
-<p>Bien entendu, le choix des technologies <em>cloud</em> n’est pas un choix neutre pour l’organisation. Ces technologies peuvent représenter des coûts d’entrée important dans la mesure où elles nécessitent un investissement dans le développement et le maintien de compétences qui ne sont pas toujours présentes dans les INS. Sur ce point, le fait que de plus en plus d’organisations actives dans l’éco-système de la donnée tendent à s’orienter vers des solutions <em>cloud</em> rassure néanmoins sur la pertinence de ce choix stratégique. De même, la transition vers les technologies <em>cloud</em> impose des coûts d’entrée pour les statisticiens. Tout d’abord, ils peuvent être confrontés à une perte de repères quant à l’endroit où les calculs sont réellement effectués. Bien qu’ils soient déjà habitués à effectuer des calculs sur des serveurs centralisés plutôt que sur un poste de travail, le conteneur ajoute une couche d’abstraction qui rend cet emplacement difficile à appréhender au départ. Mais le changement le plus perturbant dans ce paradigme est la perte de persistance des données. Dans les configurations traditionnelles — qu’il s’agisse d’un ordinateur personnel ou d’un serveur accessible via un bureau virtuel — le code, les données et l’environnement de calcul sont souvent mélangés dans une sorte de boîte noire. À l’inverse, les conteneurs, par construction, n’ont pas de persistance. Si le stockage objet fournit cette persistance, une utilisation adéquate de ces infrastructures exige une variété d’outils et de compétences : utilisation d’un système de contrôle de version pour le code (e.g.&nbsp;Git), interaction avec l’API de stockage pour enregistrer les données, gestion de fichiers de configuration et/ou de secrets et variables d’environnement, etc. En un sens, ces coûts d’entrée peuvent être considérés comme le “prix” de l’autonomie : grâce aux technologies <em>cloud</em>, les statisticiens ont désormais accès à des environnements flexibles leur permettant d’expérimenter plus librement, mais cette autonomie exige une montée en compétences significative, qui peut être intimidante et, <em>in fine</em>, limiter cette adoption. Cependant, l’expérience montre que cet effet peut être largement atténué grâce à un effort join de formation des statisticiens aux bonnes pratiques de développement et d’accompagnement des projets lors de leur transition vers des infrastructures <em>cloud</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Des ressources comme la formation aux bonnes pratiques de développement avec Git et R (<a href="">https://github.com/InseeFrLab/formation-bonnes-pratiques-git-R</a>) ou encore le cours de mise en production des projets de <em>data science</em> à l’ENSAE (<a href="">https://ensae-reproductibilite.github.io/website/</a>) visent à combler ce besoin. De même, les équipes Innovation, Datascience et KubeApp proposent des accompagnements des équipes projets pour faciliter l’adoption des nouveaux environnements de <em>self</em> et de déploiement. Ces différentes initiatives participent de cet effort de montée en compétence collective sur les outils informatiques qui favorisent la qualité des projets et ainsi leur passage en production.</p></div></div><p>Bien qu’Onyxia permettre de démocratiser l’accès aux technologies <em>cloud</em> pour les statisticiens, il s’agit d’une solution essentiellement technique. L’intégration effective des méthodes de <em>data science</em> dans la production statistique des INS soulève des défis plus larges, d’ordre organisationnel. Une leçon majeure à tirer du déploiement du premier modèle de codification de l’APE est la nécessité de surmonter la segmentation des compétences entre les équipes informatiques, métier et innovation. Par nature, les projets de <em>machine learning</em> impliquent un large éventail de compétences — connaissance du domaine métier, entraînement et amélioration des modèles, déploiement et supervision — et nécessitent donc une collaboration étroite entre des agents qui possèdent des connaissances et utilisent des langages de programmation variés. Si la continuité apportée par les technologies <em>cloud</em> favorise manifestement la collaboration entre les différentes équipes d’un projet, répondre pleinement à ces défis nécessite des choix qui dépassent le domaine technique. Par exemple, intégrer certaines compétence en <em>data science</em> directement au sein des équipes métier, en complément des équipes d’innovation centralisées, permettrait de favoriser une meilleure communication des besoins. De même, recruter des profils qui ne sont pas traditionnellement présents dans les INS, comme les <em>data engineers</em> ou les <em>ML engineers</em>, pourrait apporter de nouvelles compétences clés se situant à l’intersection des méthodologies statistiques et des techniques informatiques. Au final, la transition vers production statistique intégrant plus fortement les méthodes de <em>data science</em> implique une stratégie équilibrée qui lie des solutions techniques qui favorisent l’autonomie et l’adoption de nouveaux outils avec des ajustements organisationnels et humains, favorisant une culture de collaboration, de formation continue et d’innovation.</p>
+<p>Ces dernières années, des statisticiens formés aux méthodes de <em>data science</em> ont rejoint les instituts nationaux de statistique, avec l’objectif d’exploiter des sources de données non traditionnelles et des méthodes d’apprentissage automatique pour améliorer la production des statistiques publiques. Malgré leur expertise, ces professionnels rencontrent des obstacles majeurs, notamment l’accès à des ressources de calcul insuffisantes, des environnements de développement rigides ne favorisant pas le travail collaboratif, ainsi qu’un manque d’outils facilitant la transition des expérimentations innovantes vers des solutions prêtes pour la production.</p>
+<p>Cet article présente Onyxia, un projet open-source développé pour répondre à ces défis en permettant aux organisations de construire des environnements modernes et flexibles de <em>data science</em>, renforçant ainsi l’autonomie des statisticiens. Avec Onyxia et son instance de démonstration, le SSP Cloud, nous montrons comment les technologies cloud peuvent être rendues facilement accessibles, favorisant l’innovation, la collaboration et la reproductibilité dans le domaine des statistiques publiques. À travers un exemple concret sur la codification des activités économiques des entreprises françaises (code APE), nous illustrons comment ces outils ont permis d’opérationnaliser des modèles de machine learning en accord avec les principes du MLOps, marquant ainsi une avancée significative dans la valorisation des projets de <em>data science</em> à l’Insee.</p>
 
-
-</section>
 
 
 </main> <!-- /main -->
@@ -627,15 +616,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../src/mlops/index.html" class="pagination-link" aria-label="4 - MLOps">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">4 - MLOps</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
