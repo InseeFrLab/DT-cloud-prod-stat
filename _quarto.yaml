@@ -7,7 +7,7 @@ project:
 website: 
   title: DT Cloud & Production Statistique
   page-navigation: true
-  site-url: "https://inseefrlab.github.io/DT-cloud-prod-stat/" 
+  site-url: "https://inseefrlab.github.io/DT-cloud-prod-stat/"
   repo-url: "https://github.com/InseeFrLab/DT-cloud-prod-stat"
   favicon: images/favicon.ico
 
@@ -30,7 +30,7 @@ website:
         href: src/discussion/index.qmd
     tools: 
       - icon: file-pdf-fill
-        href: src/pdf-fr/index.pdf
+        href: dt-cloud-prod-stat.pdf
         text: "PDF"
 
 format:
