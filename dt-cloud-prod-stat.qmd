@@ -29,7 +29,7 @@ keywords:
 title-page: true
 toc: false
 linkcolor: "#000000"
-bibliography: ../references.bib
+bibliography: /src/references.bib
 lang: "fr-FR"
 
 filters:
@@ -44,22 +44,22 @@ filters:
 
 {{< pagebreak >}}
 
-{{< include ../introduction/index.qmd >}}
+{{< include /src/introduction/index.qmd >}}
 
 {{< pagebreak >}}
 
-{{< include ../principles/index.qmd >}}
+{{< include /src/principles/index.qmd >}}
 
 {{< pagebreak >}}
 
-{{< include ../implementation/index.qmd >}}
+{{< include /src/implementation/index.qmd >}}
 
 {{< pagebreak >}}
 
-{{< include ../mlops/index.qmd >}}
+{{< include /src/mlops/index.qmd >}}
 
 {{< pagebreak >}}
 
-{{< include ../discussion/index.qmd >}}
+{{< include /src/discussion/index.qmd >}}
 
 {{< pagebreak >}}
