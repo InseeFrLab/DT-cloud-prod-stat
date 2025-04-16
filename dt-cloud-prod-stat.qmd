@@ -29,7 +29,8 @@ keywords:
 title-page: true
 toc: false
 linkcolor: "#000000"
-bibliography: /src/references.bib
+bibliography: src/references.bib
+citeproc: true
 lang: "fr-FR"
 
 filters:
