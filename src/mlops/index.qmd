@@ -150,7 +150,7 @@ La @fig-full-architecture détaille les composants ajoutés à l’architecture 
 
 [^quarto]: Successeur de R Markdown, Quarto est devenu un outil essentiel. Il unifie les fonctionnalités de plusieurs packages très utiles de l’écosystème R Markdown tout en offrant une prise en charge native de plusieurs langages de programmation, dont Python et Julia en plus de R. Il est de plus en plus utilisé à l’Insee pour produire des documents reproductibles et les exporter dans divers  (HTML, PDF, ODT, etc.).
 
-![Implémentation d’une architecture MLOps retenur pour le projet](/figures/annotation-datalab.png){#fig-full-architecture}
+![Implémentation d’une architecture MLOps retenue pour le projet](/figures/annotation-datalab.png){#fig-full-architecture}
 
 ### Favoriser l'amélioration continue du modèle {#sec-annotation}
 
