@@ -9,18 +9,15 @@ format:
 author:
   - name: Romain Avouac
     affiliations:
-      - name: Insee
-        department: DMTR
+      - name: Insee - DMTR
     email: romain.avouac@insee.fr
   - name: Thomas Faria
     affiliations:
-      - name: Insee
-        department: SSP-Lab
+      - name: Insee - SSP-Lab
     email: thomas.faria@insee.fr
   - name: Frédéric Comte
     affiliations:
-      - name: Insee
-        department: DIIT
+      - name: Insee - DIIT
     email: frederic.comte@insee.fr
 fig-cap-location: top
 date: today
