@@ -5,7 +5,7 @@ author:
     - "Frédéric Comte"
 ---
 
-# Mettre les technologies cloud au service de la production statistique {.unnumbered}
+# L'apport des technologies cloud pour industrialiser le processus d'innovation statistique {.unnumbered}
 
 #### Résumé {.unnumbered}
 
