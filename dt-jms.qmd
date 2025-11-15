@@ -1,0 +1,68 @@
+---
+title: Mettre les technologies cloud au service de la production statistique
+authors:
+  - name: Romain Avouac
+    affiliation: Insee, Département de la Démographie
+  - name: Thomas Faria
+    affiliation: DG Trésor - Service du financement de l'économie
+  - name: Frédéric Comte
+    affiliation: Insee - Unité Innovation et Stratégie du Système d'Information
+keywords:
+  - cloud
+  - conteneurisation
+  - data science
+  - apprentissage statistique
+  - MLOps
+  - reproductibilité
+domains:
+  - autre
+resume: |
+    Le développement des méthodes de data science offre un potentiel considérable pour la statistique publique. Elles permettent de traiter des sources de données non-conventionnelles, que ce soit du fait de leur volumétrie ou de leur structure, et donc de produire de l’information statistique nouvelle et/ou à des résolutions spatiales et temporelles beaucoup plus fines. De même, les méthodes d’apprentissage statistique s’intègrent comme des outils supplémentaires dans la palette des statisticiens publics, leur permettant à la fois d’appréhender des domaines classiques de la statistique sous un jour nouveau — comme la codification automatique ou l’imputation de données manquantes — et de tirer parti de sources jusqu’ici peu utilisées — par exemple, l’exploitation des données satellites grâce à des modèles d’apprentissage profond.
+
+    L’intégration de ces nouveaux objets dans un processus de production statistique pose des défis qui se situent au confluent de la méthodologie statistique et de la technique informatique. Sur le plan méthodologique, de nombreux travaux réalisés aussi bien au sein du SSP que dans le cadre de projets européens ont exploré les opportunités et les implications de ces nouveaux objets pour la statistique publique. En revanche, la dimension informatique de leur exploitation a été peu documentée.
+
+    Un premier défi réside dans l’inadéquation des infrastructures informatiques communément trouvées dans les instituts statistiques pour permettre l’exploitation des sources de données dites « big data » et des méthodes d’apprentissage statistique. Un second défi est de réussir à mettre à disposition des statisticiens des environnements de développement à la fois puissants et flexibles, permettant l’expérimentation de nouveaux outils tout en favorisant les bonnes pratiques de développement. Enfin, un troisième défi concerne la difficulté de passer des expérimentations innovantes à des solutions en production, ce qui nécessite de proposer des environnements informatiques qui favorisent la portabilité du code et la collaboration entre les équipes métier et informatiques.
+
+    Cet article vise à montrer l’opportunité des technologies cloud pour répondre à ces différents défis et ainsi favoriser l’innovation dans la production statistique. Nous montrons en particulier comment certaines technologies centrales de cet écosystème — la conteneurisation et le stockage objet — permettent de mettre à disposition des environnements qui favorisent à la fois l’autonomie, le passage à l’échelle et la reproductibilité des traitements. Nous détaillons comment le projet Onyxia, développé à l’Insee, permet aux statisticiens de s’approprier ces technologies à travers une interface simple d’utilisation et un catalogue de services de data science prêts à l’emploi. Enfin, nous illustrons l’intérêt pratique de ces technologies en montrant comment elles ont grandement facilité la mise en production d’un premier modèle d’apprentissage automatique à l’Insee, qui a permis d’améliorer significativement le processus de codification des domaines d’activité des entreprises françaises (APE).
+abstract: |
+    The development of data-science methods offers considerable potential for official statistics. These methods make it possible to process non-traditional data sources — either because of their volume or their structure — and thus to produce new statistical information and/or information at much finer spatial and temporal resolutions. Likewise, statistical learning techniques have become additional tools in the public statistician’s toolbox, enabling them both to revisit classical statistical domains from a fresh perspective — such as automatic coding or missing-data imputation — and to exploit sources that have so far been little used, for example by leveraging satellite data through deep-learning models.
+
+    Integrating these new approaches into a statistical production process raises challenges that lie at the intersection of statistical methodology and information technology. On the methodological side, numerous studies — both within the French Official Statistics System (SSP) and in the context of European projects — have explored the opportunities and implications of these new methods for official statistics. By contrast, the IT dimension of their practical implementation has been far less documented.
+
+    A first challenge stems from the mismatch between the IT infrastructures commonly found in statistical institutes and the requirements of so-called “big data” sources and statistical-learning methods. A second challenge involves providing statisticians with development environments that are both powerful and flexible, enabling experimentation with new tools while encouraging good development practices. A third challenge concerns the difficulty of moving from innovative experimentation to production-ready solutions, which requires IT environments that promote code portability and collaboration between methodological and technical teams.
+
+    This working paper aims to demonstrate the value of cloud technologies in addressing these challenges and thereby fostering innovation in statistical production. In particular, we show how key technologies in this ecosystem — namely containerization and object storage — enable the provision of environments that support autonomy, scalability, and reproducibility of statistical processes. We explain how the Onyxia project, developed at Insee, allows statisticians to adopt these technologies through a user-friendly interface and a catalog of ready-to-use data-science services. Finally, we illustrate the practical benefits of these technologies by showing how they greatly facilitated the production deployment of Insee’s first machine-learning model, which significantly improved the coding process for the business activity classifications (APE) of French enterprises.
+bibliography: src/references.bib
+citeproc: true
+format:
+  jms2025-typst:
+    logo:
+      location: center-top
+      width: 160mm
+    mainfont: "tex gyre heros"
+    footer: 15^e^ édition des journées de méthodologie statistique de l'Insee (JMS 2025)
+    section-numbering: 1.1.1.
+    keep-typ: true
+---
+
+{{< pagebreak >}}
+
+{{< include /src/introduction/index.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include /src/principles/index.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include /src/implementation/index.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include /src/mlops/index.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include /src/discussion/index.qmd >}}
+
+{{< pagebreak >}}
